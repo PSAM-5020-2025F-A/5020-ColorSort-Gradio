@@ -127,11 +127,11 @@ with gr.Blocks() as demo:
     fn=order_by_color,
     inputs=my_inputs,
     outputs=my_outputs,
+    flagging_mode="never",
     cache_examples=True,
     examples=my_examples,
-    allow_flagging="never",
     fill_width=True
   )
 
 if __name__ == "__main__":
-  demo.launch()
+  demo.launch(ssr_mode=False)

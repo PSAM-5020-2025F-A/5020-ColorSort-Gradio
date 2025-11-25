@@ -53,7 +53,7 @@
       const colorEl = document.getElementById("color-picker");
       colorEl.addEventListener("change", async (event) => {
         document.getElementById('main-container').innerHTML = "Loading...";
-        const result = await mClient.predict("/predict", { 		
+        const result = await mClient.predict("/order_by_color", { 		
 		      center_color_str: event.target.value
         });
         orderImages(result.data[0].files);
